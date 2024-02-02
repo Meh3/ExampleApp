@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TruckModule", "TruckModule", "{54269695-A692-4C46-B2DB-B1F8BDBEC833}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{FEC8E38C-14BB-4B9A-8226-948FFADB1B75}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.Common.Domain", "Common\Domain\ErpApp.Common.Domain.csproj", "{E3E5C2E0-216E-446F-99AA-065B35066958}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.TruckModule.Domain", "TruckModule\Domain\ErpApp.TruckModule.Domain.csproj", "{010020E1-B835-48F0-8F0C-547B7B699C29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.TruckModule.Application", "TruckModule\Application\ErpApp.TruckModule.Application.csproj", "{AB6CE6FC-BEF7-4F8E-BB5D-B0A6C47EB358}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.TruckModule.Api", "TruckModule\Api\ErpApp.TruckModule.Api.csproj", "{97D77158-D8B0-418F-83E2-F0B867233163}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.Api", "Api\ErpApp.Api.csproj", "{30E720AF-6A40-4587-8347-528352BBA400}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3E5C2E0-216E-446F-99AA-065B35066958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3E5C2E0-216E-446F-99AA-065B35066958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E5C2E0-216E-446F-99AA-065B35066958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3E5C2E0-216E-446F-99AA-065B35066958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{010020E1-B835-48F0-8F0C-547B7B699C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{010020E1-B835-48F0-8F0C-547B7B699C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{010020E1-B835-48F0-8F0C-547B7B699C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{010020E1-B835-48F0-8F0C-547B7B699C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB6CE6FC-BEF7-4F8E-BB5D-B0A6C47EB358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6CE6FC-BEF7-4F8E-BB5D-B0A6C47EB358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6CE6FC-BEF7-4F8E-BB5D-B0A6C47EB358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6CE6FC-BEF7-4F8E-BB5D-B0A6C47EB358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D77158-D8B0-418F-83E2-F0B867233163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D77158-D8B0-418F-83E2-F0B867233163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D77158-D8B0-418F-83E2-F0B867233163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D77158-D8B0-418F-83E2-F0B867233163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E720AF-6A40-4587-8347-528352BBA400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E720AF-6A40-4587-8347-528352BBA400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E720AF-6A40-4587-8347-528352BBA400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E720AF-6A40-4587-8347-528352BBA400}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3E5C2E0-216E-446F-99AA-065B35066958} = {FEC8E38C-14BB-4B9A-8226-948FFADB1B75}
+		{010020E1-B835-48F0-8F0C-547B7B699C29} = {54269695-A692-4C46-B2DB-B1F8BDBEC833}
+		{AB6CE6FC-BEF7-4F8E-BB5D-B0A6C47EB358} = {54269695-A692-4C46-B2DB-B1F8BDBEC833}
+		{97D77158-D8B0-418F-83E2-F0B867233163} = {54269695-A692-4C46-B2DB-B1F8BDBEC833}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F724A8D-84C8-4ACE-A9DC-2DDFCB626BAA}
+	EndGlobalSection
+EndGlobal
