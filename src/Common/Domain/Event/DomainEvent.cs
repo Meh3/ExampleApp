@@ -1,5 +1,4 @@
-﻿using MediatR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,4 +6,4 @@ using System.Threading.Tasks;
 
 namespace ErpApp.Common.Domain;
 
-public abstract record DomainEvent : INotification;
+public abstract record DomainEvent;

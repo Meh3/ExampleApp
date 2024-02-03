@@ -17,7 +17,7 @@ public class TruckEditionService(ITruckRepository truckRepository)
 
         truck.UpdateDescriptiveData(truckData);
 
-        if (!await truckRepository.UpdateTruckIfCodeIsUnique(truck, cancellationToken))
+        if (!await truckRepository.TryUpdateTruckIfCodeIsUnique(truck, cancellationToken))
         {
             throw new DomainValidationException("Truck code must be unique.");
         }

@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace ErpApp.TruckModule.Application.Command;
 
-public record EditTruckCommand(int TruckId, TrackDescriptiveData TruckData) : IRequest;
+public record EditTruckCommand(int TruckId, string Code, string Name, string? Description) : IRequest;
 
-internal class EditTruckHandler(TruckEditionService businessService) : IRequestHandler<EditTruckCommand>
+public class EditTruckHandler(TruckEditionService domainService) : IRequestHandler<EditTruckCommand>
 {
-    public async Task Handle(EditTruckCommand command, CancellationToken cancellationToken) =>
-        await businessService.EditDescriptiveData(command.TruckId, command.TruckData, cancellationToken);
+    public async Task Handle(EditTruckCommand request, CancellationToken cancellationToken) =>
+        await domainService.EditDescriptiveData(request.TruckId, new(request.Code, request.Name, request.Description), cancellationToken);
 }

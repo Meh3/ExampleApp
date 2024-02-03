@@ -8,16 +8,18 @@ using System.Threading.Tasks;
 
 namespace ErpApp.TruckModule.Application.Command;
 
-public record SetTruckNextStatusCommand(int TruckId) : IRequest;
+public record SetTruckNextStatusCommand(int TruckId) : IRequest<TruckStatus>;
 
-internal class SetTruckNextStatusHandler(ITruckRepository repository) : IRequestHandler<SetTruckNextStatusCommand>
+public class SetTruckNextStatusHandler(ITruckRepository repository) : IRequestHandler<SetTruckNextStatusCommand, TruckStatus>
 {
-    public async Task Handle(SetTruckNextStatusCommand command, CancellationToken cancellationToken)
+    public async Task<TruckStatus> Handle(SetTruckNextStatusCommand request, CancellationToken cancellationToken)
     {
-        var truck = await repository.GetTrack(command.TruckId, cancellationToken);
+        var truck = await repository.GetTrack(request.TruckId, cancellationToken);
 
-        truck.SetNextValidStatus();
+        var nextStatus = truck.SetNextValidStatus();
 
         await repository.UpdateTruck(truck, cancellationToken);
+
+        return nextStatus;
     }
 }

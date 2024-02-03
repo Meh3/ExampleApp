@@ -14,7 +14,7 @@ public interface ITruckRepository
 {
     public Task<int?> AddTruckAndSendEventIfCodeIsUnique(Truck truck, Func<int, DomainEvent> domainEvent, CancellationToken cancellationToken);
 
-    public Task<bool> UpdateTruckIfCodeIsUnique(Truck truck, CancellationToken cancellationToken);
+    public Task<bool> TryUpdateTruckIfCodeIsUnique(Truck truck, CancellationToken cancellationToken);
 
     public Task UpdateTruck(Truck truck, CancellationToken cancellationToken);
 

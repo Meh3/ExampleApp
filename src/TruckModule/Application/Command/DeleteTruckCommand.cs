@@ -10,11 +10,11 @@ namespace ErpApp.TruckModule.Application.Command;
 
 public record DeleteTruckCommand(int TruckId) : IRequest;
 
-internal class DeleteTruckHandler(ITruckRepository repository) : IRequestHandler<DeleteTruckCommand>
+public class DeleteTruckHandler(ITruckRepository repository) : IRequestHandler<DeleteTruckCommand>
 {
-    public async Task Handle(DeleteTruckCommand command, CancellationToken cancellationToken)
+    public async Task Handle(DeleteTruckCommand request, CancellationToken cancellationToken)
     {
-        var truck = await repository.GetTrack(command.TruckId, cancellationToken);
+        var truck = await repository.GetTrack(request.TruckId, cancellationToken);
 
         truck.Delete(); 
 

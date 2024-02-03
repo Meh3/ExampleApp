@@ -10,13 +10,13 @@ namespace ErpApp.TruckModule.Application.Command;
 
 public record SetTruckBackToWorkCommand(int TruckId, TruckStatus Status) : IRequest;
 
-internal class SetTruckBackToWorkhandler(ITruckRepository repository) : IRequestHandler<SetTruckBackToWorkCommand>
+public class SetTruckBackToWorkHandler(ITruckRepository repository) : IRequestHandler<SetTruckBackToWorkCommand>
 {
-    public async Task Handle(SetTruckBackToWorkCommand command, CancellationToken cancellationToken)
+    public async Task Handle(SetTruckBackToWorkCommand request, CancellationToken cancellationToken)
     {
-        var truck = await repository.GetTrack(command.TruckId, cancellationToken);
+        var truck = await repository.GetTrack(request.TruckId, cancellationToken);
 
-        truck.SetStatusFromOutOfService(command.Status);
+        truck.SetStatusFromOutOfService(request.Status);
 
         await repository.UpdateTruck(truck, cancellationToken);
     }

@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.TruckModule.Api", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.Api", "Api\ErpApp.Api.csproj", "{30E720AF-6A40-4587-8347-528352BBA400}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.TruckModule.Infrastructure", "TruckModule\Infrastructure\ErpApp.TruckModule.Infrastructure.csproj", "{724FFCAC-E0AB-4E9D-8A2B-68C502F69075}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{30E720AF-6A40-4587-8347-528352BBA400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30E720AF-6A40-4587-8347-528352BBA400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30E720AF-6A40-4587-8347-528352BBA400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724FFCAC-E0AB-4E9D-8A2B-68C502F69075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724FFCAC-E0AB-4E9D-8A2B-68C502F69075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724FFCAC-E0AB-4E9D-8A2B-68C502F69075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724FFCAC-E0AB-4E9D-8A2B-68C502F69075}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 		{010020E1-B835-48F0-8F0C-547B7B699C29} = {54269695-A692-4C46-B2DB-B1F8BDBEC833}
 		{AB6CE6FC-BEF7-4F8E-BB5D-B0A6C47EB358} = {54269695-A692-4C46-B2DB-B1F8BDBEC833}
 		{97D77158-D8B0-418F-83E2-F0B867233163} = {54269695-A692-4C46-B2DB-B1F8BDBEC833}
+		{724FFCAC-E0AB-4E9D-8A2B-68C502F69075} = {54269695-A692-4C46-B2DB-B1F8BDBEC833}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F724A8D-84C8-4ACE-A9DC-2DDFCB626BAA}

@@ -10,11 +10,11 @@ namespace ErpApp.TruckModule.Application.Command;
 
 public record SetTruckOutOfServiceCommand(int TruckId) : IRequest;
 
-internal class SetTruckOutOfServiceHandler(ITruckRepository repository) : IRequestHandler<SetTruckOutOfServiceCommand>
+public class SetTruckOutOfServiceHandler(ITruckRepository repository) : IRequestHandler<SetTruckOutOfServiceCommand>
 {
-    public async Task Handle(SetTruckOutOfServiceCommand command, CancellationToken cancellationToken)
+    public async Task Handle(SetTruckOutOfServiceCommand request, CancellationToken cancellationToken)
     {
-        var truck = await repository.GetTrack(command.TruckId, cancellationToken);
+        var truck = await repository.GetTrack(request.TruckId, cancellationToken);
 
         truck.SetOutOfServiceStatus();
 
